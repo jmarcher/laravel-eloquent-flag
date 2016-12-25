@@ -9,8 +9,15 @@ Eloquent flagged attributes behavior. Add commonly used flags to models very qui
 
 ![cog-laravel-eloquent-flag](https://cloud.githubusercontent.com/assets/1849174/21166452/b1bbf3e8-c1b6-11e6-8f06-468828402ebe.png)
 
+## Features
+
+- Designed to work with Laravel Eloquent models
+- Each model can has as many flags as required
+- Each flag adds global query scopes to models
+- Covered with unit tests
+
 ## How it works
- 
+
 Eloquent Flag is an easy way to add flagged attributes to eloquent models. All flags has their own trait which adds global scopes to desired entity.
 
 The main logic of the flags: If flag is `false` - entity should be hidden from the query results. Omitted entities could be retrieved by using special global scope methods.  
@@ -31,6 +38,8 @@ composer require cybercog/laravel-eloquent-flag
 ```
 
 And then include the service provider within `app/config/app.php`.
+
+*// Service provider not using yet. Will be used for console commands in future.*
 
 ```php
 'providers' => [
@@ -304,7 +313,9 @@ If you discover any security related issues, please email support@cybercog.su in
 
 ## License
 
-Please see [License](LICENSE) file for more information.
+- `Laravel Eloquent Flag` package is open-sourced software licensed under the [MIT license](LICENSE).
+- `Check Mark` image licensed under [Creative Commons 3.0](https://creativecommons.org/licenses/by/3.0/us/) by Kimmi Studio.
+- `Clock Check` image licensed under [Creative Commons 3.0](https://creativecommons.org/licenses/by/3.0/us/) by Harsha Rai.
 
 ## About CyberCog
 
