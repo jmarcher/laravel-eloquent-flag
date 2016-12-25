@@ -16,18 +16,12 @@ Eloquent flagged attributes behavior. Add commonly used flags to models very qui
 - Each flag adds global query scopes to models
 - Covered with unit tests
 
-## How it works
-
-Eloquent Flag is an easy way to add flagged attributes to eloquent models. All flags has their own trait which adds global scopes to desired entity.
+## Available flags list
 
 There are 2 types of flags:
 
 - `Boolean` useful when you need to mark entity as active, published, accepted and etc, but you don't care when exactly this action was performed or you are logging user actions by yourself.
-- `Timestamp` works the same as `Boolean` flags, but has `null` value instead of `false` and `timestamp` of performed action instead of `true` value. This allows you to have an action time.
-
-The main logic of the flags: If flag is `false` or `null` - entity should be hidden from the query results. Omitted entities could be retrieved by using special global scope methods.  
-
-## Available flags list
+- `Timestamp` works the same as `Boolean` flags, but has `null` value instead of `false` and `timestamp` of performed action instead of `true` value. This allows you to retrieve user action time. This could be useful when you want to get all records published after your last login.
 
 | Trait name | Database columns | Flag type |
 | ---------- | ---------------- | --------- |
@@ -36,6 +30,12 @@ The main logic of the flags: If flag is `false` or `null` - entity should be hid
 | `HasKeptFlag` | `is_kept` | Boolean |
 | `HasPublishedFlag` | `is_published` | Boolean |
 | `HasPublishedAt` | `published_at` | Timestamp |
+
+## How it works
+
+Eloquent Flag is an easy way to add flagged attributes to eloquent models. All flags has their own trait which adds global scopes to desired entity.
+
+The main logic of the flags: If flag is `false` or `null` - entity should be hidden from the query results. Omitted entities could be retrieved by using special global scope methods.  
 
 ## Installation
 
