@@ -11,22 +11,22 @@
 
 namespace Cog\Flag\Traits;
 
-use Cog\Flag\Scopes\ActiveFlagScope;
+use Cog\Flag\Scopes\PublishedAtScope;
 
 /**
- * Class HasActiveFlag.
+ * Class HasPublishedAt.
  *
  * @package Cog\Flag\Traits
  */
-trait HasActiveFlag
+trait HasPublishedAt
 {
     /**
-     * Boot the HasKeptFlag trait for a model.
+     * Boot the HasPublishedAt trait for a model.
      *
      * @return void
      */
-    public static function bootHasActiveFlag()
+    public static function bootHasPublishedAt()
     {
-        static::addGlobalScope(new ActiveFlagScope);
+        static::addGlobalScope(new PublishedAtScope);
     }
 }

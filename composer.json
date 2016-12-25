@@ -30,5 +30,8 @@
         "psr-4": {
             "Cog\\Flag\\Tests\\": "tests/"
         }
+    },
+    "config": {
+        "sort-packages": true
     }
 }
