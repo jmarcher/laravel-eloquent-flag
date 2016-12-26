@@ -21,7 +21,7 @@ Eloquent flagged attributes behavior. Add commonly used flags to models very qui
 There are 2 types of flags:
 
 - `Boolean` useful when you need to mark entity as active, published, accepted and etc, but you don't care when exactly this action was performed or you are logging user actions by yourself.
-- `Timestamp` works the same as `Boolean` flags, but has `null` value instead of `false` and `timestamp` of performed action instead of `true` value. This allows you to retrieve user action time. This could be useful when you want to get all records published after your last login.
+- `Timestamp` works the same as `Boolean` flags, but has `null` value instead of `false` and `timestamp` of performed action instead of `true` value. This allows you to retrieve user action time. This allows you to get all records published after your last login.
 
 | Trait name | Database columns | Flag type |
 | ---------- | ---------------- | --------- |
@@ -47,7 +47,7 @@ composer require cybercog/laravel-eloquent-flag
 
 And then include the service provider within `app/config/app.php`.
 
-*// Service provider not using yet. Will be used for console commands in future.*
+*// Service provider not using yet. Will be used to boot console commands in future.*
 
 ```php
 'providers' => [
