@@ -2,7 +2,7 @@
 
 All notable changes to `laravel-eloquent-flag` will be documented in this file.
 
-## 2.0.0 - 2016-12-27
+## 1.5.0 - 2016-12-27
 
 - `published_at` timed flag added.
 
