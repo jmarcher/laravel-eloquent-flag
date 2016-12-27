@@ -371,6 +371,8 @@ If you discover any security related issues, please email support@cybercog.su in
 
 *Not found.*
 
+*Feel free to add more alternatives as Pull Request.*
+
 ## License
 
 - `Laravel Eloquent Flag` package is open-sourced software licensed under the [MIT license](LICENSE).
