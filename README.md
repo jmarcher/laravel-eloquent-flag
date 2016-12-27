@@ -29,6 +29,7 @@ There are 2 types of flags:
 | `HasActiveFlag` | `is_active` | Boolean |
 | `HasKeptFlag` | `is_kept` | Boolean |
 | `HasPublishedFlag` | `is_published` | Boolean |
+| `HasVerifiedFlag` | `is_verified` | Boolean |
 | `HasPublishedAt` | `published_at` | Timestamp |
 
 ## How it works
@@ -208,6 +209,57 @@ Post::where('id', 4)->publish();
 
 ```shell
 Post::where('id', 4)->unpublish();
+```
+
+### Setup a verifiable model
+
+```php
+<?php
+
+namespace App\Models;
+
+use Cog\Flag\Traits\HasVerifiedFlag;
+use Illuminate\Database\Eloquent\Model;
+
+class Post extends Model
+{
+    use HasVerifiedFlag;
+}
+```
+
+*Model must have boolean `is_verified` column in database table.*
+
+### Available functions
+
+#### Get only verified models
+
+```shell
+Post::all();
+Post::withoutUnverified();
+```
+
+#### Get only unverified models
+
+```shell
+Post::onlyUnverified();
+```
+
+#### Get verified + unverified models
+
+```shell
+Post::withUnverified();
+```
+
+#### Verify model
+
+```shell
+Post::where('id', 4)->verify();
+```
+
+#### Unverify model
+
+```shell
+Post::where('id', 4)->unverify();
 ```
 
 ### Setup a keepable model
