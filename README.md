@@ -23,7 +23,8 @@ Eloquent flagged attributes behavior. Add commonly used flags to models very qui
 | `HasAcceptedFlag` | `is_accepted` | Boolean | Classic |
 | `HasActiveFlag` | `is_active` | Boolean | Classic |
 | `HasApprovedFlag` | `is_approved` | Boolean | Classic |
-| `HasExpiredInverseFlag` | `is_expired` | Boolean | Inverse |
+| `HasClosedFlag` | `is_closed` | Boolean | Inverse |
+| `HasExpiredFlag` | `is_expired` | Boolean | Inverse |
 | `HasKeptFlag` | `is_kept` | Boolean | Classic |
 | `HasPublishedFlag` | `is_published` | Boolean | Classic |
 | `HasVerifiedFlag` | `is_verified` | Boolean | Classic |
@@ -447,6 +448,57 @@ Post::where('id', 4)->expire();
 
 ```shell
 Post::where('id', 4)->unexpire();
+```
+
+### Setup a closable model
+
+```php
+<?php
+
+namespace App\Models;
+
+use Cog\Flag\Traits\Inverse\HasClosedFlag;
+use Illuminate\Database\Eloquent\Model;
+
+class Post extends Model
+{
+    use HasClosedFlag;
+}
+```
+
+*Model must have boolean `is_closed` column in database table.*
+
+### Available functions
+
+#### Get only not closed models
+
+```shell
+Post::all();
+Post::withoutClosed();
+```
+
+#### Get only closed models
+
+```shell
+Post::onlyClosed();
+```
+
+#### Get closed + not closed models
+
+```shell
+Post::withClosed();
+```
+
+#### Set close flag to model
+
+```shell
+Post::where('id', 4)->close();
+```
+
+#### Remove close flag from model
+
+```shell
+Post::where('id', 4)->unclose();
 ```
 
 ## Testing
