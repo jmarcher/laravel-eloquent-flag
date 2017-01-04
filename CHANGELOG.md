@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-eloquent-flag` will be documented in this file.
 
+## 2.1.0 - 2016-01-04
+
+- `is_closed` inverse boolean flag added.
+
 ## 2.0.0 - 2016-01-04
 
 #### Breaking changes
