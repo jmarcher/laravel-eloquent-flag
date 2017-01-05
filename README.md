@@ -82,32 +82,32 @@ class Post extends Model
 
 #### Get only active models
 
-```shell
+```php
 Post::all();
 Post::withoutInactive();
 ```
 
 #### Get only inactive models
 
-```shell
+```php
 Post::onlyInactive();
 ```
 
 #### Get active + inactive models
 
-```shell
+```php
 Post::withInactive();
 ```
 
 #### Activate model
 
-```shell
+```php
 Post::where('id', 4)->activate();
 ```
 
 #### Deactivate model
 
-```shell
+```php
 Post::where('id', 4)->deactivate();
 ```
 
@@ -133,32 +133,32 @@ class Post extends Model
 
 #### Get only accepted models
 
-```shell
+```php
 Post::all();
 Post::withoutUnaccepted();
 ```
 
 #### Get only unaccepted models
 
-```shell
+```php
 Post::onlyUnaccepted();
 ```
 
 #### Get accepted + unaccepted models
 
-```shell
+```php
 Post::withUnaccepted();
 ```
 
 #### Accept model
 
-```shell
+```php
 Post::where('id', 4)->accept();
 ```
 
 #### Deactivate model
 
-```shell
+```php
 Post::where('id', 4)->unaccept();
 ```
 
@@ -184,32 +184,32 @@ class Post extends Model
 
 #### Get only approved models
 
-```shell
+```php
 Post::all();
 Post::withoutUnapproved();
 ```
 
 #### Get only unapproved models
 
-```shell
+```php
 Post::onlyUnapproved();
 ```
 
 #### Get approved + unapproved models
 
-```shell
+```php
 Post::withUnapproved();
 ```
 
 #### Approve model
 
-```shell
+```php
 Post::where('id', 4)->approve();
 ```
 
 #### Unapprove model
 
-```shell
+```php
 Post::where('id', 4)->unapprove();
 ```
 
@@ -235,32 +235,32 @@ class Post extends Model
 
 #### Get only published models
 
-```shell
+```php
 Post::all();
 Post::withoutUnpublished();
 ```
 
 #### Get only unpublished models
 
-```shell
+```php
 Post::onlyUnpublished();
 ```
 
 #### Get published + unpublished models
 
-```shell
+```php
 Post::withUnpublished();
 ```
 
 #### Publish model
 
-```shell
+```php
 Post::where('id', 4)->publish();
 ```
 
 #### Unpublish model
 
-```shell
+```php
 Post::where('id', 4)->unpublish();
 ```
 
@@ -286,32 +286,32 @@ class Post extends Model
 
 #### Get only verified models
 
-```shell
+```php
 Post::all();
 Post::withoutUnverified();
 ```
 
 #### Get only unverified models
 
-```shell
+```php
 Post::onlyUnverified();
 ```
 
 #### Get verified + unverified models
 
-```shell
+```php
 Post::withUnverified();
 ```
 
 #### Verify model
 
-```shell
+```php
 Post::where('id', 4)->verify();
 ```
 
 #### Unverify model
 
-```shell
+```php
 Post::where('id', 4)->unverify();
 ```
 
@@ -362,38 +362,38 @@ By default all records that have a `is_kept` equals to 0 will be excluded from y
 
 #### Get only kept models
 
-```shell
+```php
 Post::all();
 Post::withoutUnkept();
 ```
 
 #### Get only unkept models
 
-```shell
+```php
 Post::onlyUnkept();
 ```
 
 #### Get kept + unkept models
 
-```shell
+```php
 Post::withUnkept();
 ```
 
 #### Keep model
 
-```shell
+```php
 Post::where('id', 4)->keep();
 ```
 
 #### Unkeep model
 
-```shell
+```php
 Post::where('id', 4)->unkeep();
 ```
 
 #### Get unkept models which older than hours
 
-```shell
+```php
 Post::onlyUnkeptOlderThanHours(4);
 ```
 
@@ -421,32 +421,32 @@ class Post extends Model
 
 #### Get only not expired models
 
-```shell
+```php
 Post::all();
 Post::withoutExpired();
 ```
 
 #### Get only expired models
 
-```shell
+```php
 Post::onlyExpired();
 ```
 
 #### Get expired + not expired models
 
-```shell
+```php
 Post::withExpired();
 ```
 
 #### Set expire flag to model
 
-```shell
+```php
 Post::where('id', 4)->expire();
 ```
 
 #### Remove expire flag from model
 
-```shell
+```php
 Post::where('id', 4)->unexpire();
 ```
 
@@ -472,32 +472,32 @@ class Post extends Model
 
 #### Get only not closed models
 
-```shell
+```php
 Post::all();
 Post::withoutClosed();
 ```
 
 #### Get only closed models
 
-```shell
+```php
 Post::onlyClosed();
 ```
 
 #### Get closed + not closed models
 
-```shell
+```php
 Post::withClosed();
 ```
 
 #### Set close flag to model
 
-```shell
+```php
 Post::where('id', 4)->close();
 ```
 
 #### Remove close flag from model
 
-```shell
+```php
 Post::where('id', 4)->unclose();
 ```
 
@@ -505,7 +505,7 @@ Post::where('id', 4)->unclose();
 
 Run the tests with:
 
-```shell
+```sh
 vendor/bin/phpunit
 ```
 

@@ -8,12 +8,12 @@ All notable changes to `laravel-eloquent-flag` will be documented in this file.
 
 ## 2.0.0 - 2016-01-04
 
-#### Breaking changes
+### Breaking changes
 
 - Namespaces of flag's traits received `Classic` at the end: `Cog\Flag\Traits\Classic`.
 - Namespaces of flag's scopes received `Classic` at the end: `Cog\Flag\Scopes\Classic`.
 
-#### Added
+### Added
 
 - `Inverse Logic` flags group. Hides entities if flag not set.
 - `is_expired` inverse boolean flag added.
