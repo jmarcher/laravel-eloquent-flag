@@ -27,7 +27,7 @@ class ClosedFlagScope implements Scope
      *
      * @var array
      */
-    protected $extensions = ['Unclose', 'Close', 'WithClosed', 'WithoutClosed', 'OnlyClosed'];
+    protected $extensions = ['Open', 'Close', 'WithClosed', 'WithoutClosed', 'OnlyClosed'];
 
     /**
      * Apply the scope to a given Eloquent query builder.
@@ -55,14 +55,14 @@ class ClosedFlagScope implements Scope
     }
 
     /**
-     * Add the `unclose` extension to the builder.
+     * Add the `open` extension to the builder.
      *
      * @param \Illuminate\Database\Eloquent\Builder $builder
      * @return void
      */
-    protected function addUnclose(Builder $builder)
+    protected function addOpen(Builder $builder)
     {
-        $builder->macro('unclose', function (Builder $builder) {
+        $builder->macro('open', function (Builder $builder) {
             $builder->withClosed();
 
             return $builder->update(['is_closed' => 0]);

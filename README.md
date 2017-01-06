@@ -18,16 +18,16 @@ Eloquent flagged attributes behavior. Add commonly used flags to models very qui
 
 ## Available flags list
 
-| Trait name | Database columns | Flag type | Logic |
-| ---------- | ---------------- | --------- | ----- |
-| `HasAcceptedFlag` | `is_accepted` | Boolean | Classic |
-| `HasActiveFlag` | `is_active` | Boolean | Classic |
-| `HasApprovedFlag` | `is_approved` | Boolean | Classic |
-| `HasClosedFlag` | `is_closed` | Boolean | Inverse |
-| `HasExpiredFlag` | `is_expired` | Boolean | Inverse |
-| `HasKeptFlag` | `is_kept` | Boolean | Classic |
-| `HasPublishedFlag` | `is_published` | Boolean | Classic |
-| `HasVerifiedFlag` | `is_verified` | Boolean | Classic |
+| Trait name | Logic | Database columns | Flag type |
+| ---------- | ----- | ---------------- | --------- |
+| `HasAcceptedFlag` | Classic | `is_accepted` | Boolean |
+| `HasActiveFlag` | Classic | `is_active` | Boolean |
+| `HasApprovedFlag` | Classic | `is_approved` | Boolean |
+| `HasClosedFlag` | Inverse | `is_closed` | Boolean |
+| `HasExpiredFlag` | Inverse | `is_expired` | Boolean |
+| `HasKeptFlag` | Classic | `is_kept` | Boolean |
+| `HasPublishedFlag` | Classic | `is_published` | Boolean |
+| `HasVerifiedFlag` | Classic | `is_verified` | Boolean |
 
 ## How it works
 
